@@ -27,4 +27,16 @@ class ProductController extends Controller
         $products = $this->productService->getAll();
         return view('backend.product.list', compact('products','categories'));
     }
+
+    public function create()
+    {   
+        $categories = Category::all();
+        return view('backend.product.add',compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $this->productService->add($request);
+        return redirect()->route('products.index');
+    }
 }
