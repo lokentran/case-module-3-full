@@ -13,4 +13,10 @@ class FrontController extends Controller
         $categories = Category::all();
         return view('frontend.index', \compact('products','categories'));
     }
+
+    public function showDetail($id) {
+        $product = Product::findOrFail($id);
+        $categories = Category::all();
+        return view('frontend.product.detail', \compact('product','categories'));
+    }
 }

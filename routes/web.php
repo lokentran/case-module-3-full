@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'FrontController@getIndex')->name('front.index');
+Route::group(['prefix' => 'categories'], function () {
+    Route::get('products/{id}','FrontController@showDetail')->name('product.detail');
+});
 
 Route::get('login', 'LoginController@getLogin');
 Route::post('login', 'LoginController@postLogin')->name('login');
