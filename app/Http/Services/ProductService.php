@@ -43,5 +43,10 @@ class ProductService {
         $this->productRepo->save($product);
     }
 
+    
+    public function destroy($id) {
+        $product = $this->productRepo->getById($id);
+        $this->productRepo->delete($product);
+    }
 }
 

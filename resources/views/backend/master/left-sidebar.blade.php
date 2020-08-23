@@ -5,7 +5,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse mt-4" id="navbarNav">
                 <ul class="navbar-nav flex-column">
                     <li class="nav-divider">
                         Menu
@@ -75,9 +75,9 @@
                             </ul>
                         </div> --}}
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="" ><i class="fa fa-fw fa-rocket"></i>Cửa hàng</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="" ><i class="fa fa-fw fa-rocket"></i>Sản phẩm</a>
                     </li>
@@ -106,7 +106,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item ">
+                    {{-- <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
                         <div id="submenu-4" class="collapse submenu" style="">
                             <ul class="nav flex-column">
@@ -140,8 +140,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-divider">
+                    </li> --}}
+                    {{-- <li class="nav-divider">
                         Features
                     </li>
                     <li class="nav-item">
@@ -275,7 +275,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </nav>
