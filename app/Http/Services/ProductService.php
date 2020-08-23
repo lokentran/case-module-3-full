@@ -30,7 +30,7 @@ class ProductService {
         }
 
         $this->productRepo->save($product);
-        $product->stores()->sync($request->store);
+        
     }
 
 
