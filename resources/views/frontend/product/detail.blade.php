@@ -19,7 +19,7 @@
           <div class="row">
         
               <div class="col-lg-6 mb-5 ftco-animate">
-                  <a href="images/product-1.jpg" class="image-popup"><img src="images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                  <a href="#" class="image-popup"><img src="storage/{{ $product->img }}" class="img-fluid" alt="Colorlib Template"></a>
               </div>
               <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                   <h3>{{ $product->name }}</h3>
@@ -242,7 +242,7 @@
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script> 
 <script src="js/aos.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
