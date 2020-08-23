@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container-fluid mt-5">
-        <a class="btn btn-secondary" href="">Thêm sản phẩm</a>
+        <a class="btn btn-secondary" href="{{ route('products.create') }}">Thêm sản phẩm</a>
         <table class="table table-striped" >
             <thead>
                 <tr>
