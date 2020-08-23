@@ -4,8 +4,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <form class="mt-5" action="" method="post" enctype="multipart/form-data">
-            @method('PUT')
+        <form class="mt-5" action="{{ route('products.update',$product->id) }}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">
@@ -45,7 +44,7 @@
                 <input type="file" class="form-control" name="image">
             </div>
                 
-            <button class="mt-3 mb-5 btn btn-primary" type="submit">Thêm sản phẩm</button>
+            <button class="mt-3 mb-5 btn btn-primary" type="submit">Sửa sản phẩm</button>
 
         </form>
     </div>

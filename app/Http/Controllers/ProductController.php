@@ -46,4 +46,12 @@ class ProductController extends Controller
         $product = $this->productService->getById($id);
         return view('backend.product.edit',compact('product','categories'));
     }
+
+    public function update(Request $request, $id)
+    {   
+        $this->productService->update($request, $id);
+        return redirect()->route('products.index');
+    }
+
+
 }
