@@ -39,4 +39,11 @@ class ProductController extends Controller
         $this->productService->add($request);
         return redirect()->route('products.index');
     }
+
+    public function edit($id)
+    {
+        $categories = Category::all();
+        $product = $this->productService->getById($id);
+        return view('backend.product.edit',compact('product','categories'));
+    }
 }

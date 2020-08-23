@@ -25,5 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('', 'ProductController@index')->name('products.index');
         Route::get('create', 'ProductController@create')->name('products.create');
         Route::post('', 'ProductController@store')->name('products.store');
+        Route::get('{id}/edit', 'ProductController@edit')->name('products.edit');
+        // Route::post('', 'ProductController@store')->name('products.store');
     });
 });

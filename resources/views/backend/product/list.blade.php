@@ -29,7 +29,7 @@
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->category->name }}</td>
        
-                        <td><a href="" class="btn btn-primary">Edit</a></td>
+                        <td><a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary">Edit</a></td>
                     </tr>
                 @empty
                     <tr>
