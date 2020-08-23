@@ -14,9 +14,8 @@ class LoginController extends Controller
     public function postLogin(Request $request) {
         $email = $request->email;
         $password = $request->password;
-        if(Auth::attempt(['email' => $email, 'password' => $password])) {
-    
-            return \redirect('admin.products');
+        if(Auth::attempt(['email' => $email, 'password' => $password])) { 
+            return \redirect('admin', $email);
         } else {
             return \redirect()->back();
         }

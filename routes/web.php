@@ -20,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('login', 'LoginController@getLogin');
 Route::post('login', 'LoginController@postLogin')->name('login');
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'products'], function () {
+        Route::get('', 'ProductController@index')->name('products.index');
+    });
+});
