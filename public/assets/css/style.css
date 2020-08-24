@@ -14,3 +14,8 @@ textarea {
 body .confirm-table {
     min-width: 100px !important;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}

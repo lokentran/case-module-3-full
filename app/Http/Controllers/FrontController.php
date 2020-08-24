@@ -19,4 +19,11 @@ class FrontController extends Controller
         $categories = Category::all();
         return view('frontend.product.detail', \compact('product','categories'));
     }
+
+    public function getAbout() {
+        return view('frontend.about');
+    }
+    public function getContact() {
+        return view('frontend.contact');
+    }
 }

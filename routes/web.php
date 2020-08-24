@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'FrontController@getIndex')->name('front.index');
+Route::get('/about', 'FrontController@getAbout')->name('front.about');
+Route::get('/contact', 'FrontController@getContact')->name('front.contact');
 
 Route::group(['prefix' => 'products'], function () {
     Route::get('/{id}','FrontController@showDetail')->name('product.detail');
@@ -29,6 +31,10 @@ Route::group(['prefix' => 'cart'], function () {
 
 Route::get('login', 'LoginController@getLogin');
 Route::post('login', 'LoginController@postLogin')->name('login');
+
+// Route::group(['middleware' => ['groupName']], function () {
+    
+// });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'products'], function () {

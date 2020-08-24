@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Http\Services\ProductService;
+use App\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -34,7 +35,7 @@ class ProductController extends Controller
         return view('backend.product.add',compact('categories'));
     }
 
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         $this->productService->add($request);
         return redirect()->route('products.index');

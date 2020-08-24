@@ -8,22 +8,22 @@
             @csrf
 
             <div class="form-group">
-                <label for="">Tên sản phẩm</label>
+                <label for="">Product Name</label>
                 <input type="text" class="form-control" name="name">
             </div>
 
             <div class="form-group">
-                <label for="">Giá sản phẩm</label>
+                <label for="">Product Price</label>
                 <input type="text" class="form-control" name="price">
             </div>
 
             <div class="form-group">
-                <label for="">Mô tả sản phẩm</label>
+                <label for="">Description</label>
                 <textarea name="description" id="" cols="140" rows="5"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="">Danh mục sản phẩm</label>
+                <label for="">Category</label>
                 <select class="custom-select custom-select-md mb-3" name="category_id" id="">
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -32,12 +32,12 @@
             </div>
 
         
-            <label for="">Ảnh sản phẩm</label>
+            <label for="">Produc Image</label>
             <div>
                 <input type="file" class="form-control" name="image">
             </div>
                 
-            <button class="mt-3 mb-5 btn btn-primary" type="submit">Thêm sản phẩm</button>
+            <button class="mt-3 mb-5 btn btn-primary" type="submit">Add Product</button>
 
         </form>
     </div>
