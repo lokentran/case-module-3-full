@@ -6,3 +6,11 @@ img {
 textarea {
     width:100%;
 }
+
+.table td, .table th {
+    max-width: 220px;
+}
+
+body .confirm-table {
+    min-width: 100px !important;
+}

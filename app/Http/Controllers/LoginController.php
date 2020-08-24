@@ -15,7 +15,7 @@ class LoginController extends Controller
         $email = $request->email;
         $password = $request->password;
         if(Auth::attempt(['email' => $email, 'password' => $password])) { 
-            return \redirect('admin', $email);
+            return \redirect()->route('products.index');
         } else {
             return \redirect()->back();
         }
