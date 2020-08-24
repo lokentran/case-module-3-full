@@ -119,9 +119,9 @@
                                         @forelse (Session::get('cart')->items as $item)
                                         <tr class="text-left">
                                             <td>{{ $item['product']->name }}</td>
-                                            <td>{{ $item['product']->price }}</td>
+                                            <td>${{ $item['product']->price }}</td>
                                             <td>{{ $item['quantity'] }}</td>
-                                            <td>{{ $item['price'] }}</td>
+                                            <td>${{ $item['price'] }}</td>
                                         </tr>
                                         @empty
                                     @endforelse
@@ -134,7 +134,7 @@
                             </table>
                            
                             <p class="d-flex total-price">
-                                <span>Total: {{ Session::get('cart') ? Session::get('cart')->totalPrice : 0 }}</span>
+                                <span>Total: ${{ Session::get('cart') ? Session::get('cart')->totalPrice : 0 }}</span>
                             </p>
                             <p><button class="btn btn-primary py-3 px-4">Place an order</button></p>
                         </div>

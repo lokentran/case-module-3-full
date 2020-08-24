@@ -10,16 +10,32 @@
             <div class="form-group">
                 <label for="">Product Name</label>
                 <input type="text" class="form-control" name="name">
+                @if ($errors->has('name'))
+                    <div class="alert alert-danger">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </div>
+                @endif
+           
             </div>
 
             <div class="form-group">
                 <label for="">Product Price</label>
                 <input type="text" class="form-control" name="price">
+                @if ($errors->has('price'))
+                <div class="alert alert-danger">
+                    <strong>{{ $errors->first('price') }}</strong>
+                </div>
+            @endif
             </div>
 
             <div class="form-group">
                 <label for="">Description</label>
                 <textarea name="description" id="" cols="140" rows="5"></textarea>
+                @if ($errors->has('description'))
+                <div class="alert alert-danger">
+                    <strong>{{ $errors->first('description') }}</strong>
+                </div>
+            @endif
             </div>
 
             <div class="form-group">

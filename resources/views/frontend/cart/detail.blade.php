@@ -41,7 +41,7 @@
                               {{-- <p>Far far away, behind the word mountains, far from the countries</p> --}}
                           </td>
                           
-                          <td class="price">{{ $item['product']->price }}</td>
+                          <td class="price">${{ $item['product']->price }}</td>
                           
                           <td class="quantity">
                               <div class="input-group mb-3">
@@ -49,7 +49,7 @@
                             </div>
                           </td>
                             
-                          <td class="total">{{ $item['price']}}</td>
+                          <td class="total">${{ $item['price']}}</td>
                         
                         </tr><!-- END TR-->
                     @empty
@@ -74,7 +74,7 @@
                       <p class="d-flex total-price">
                           <span>Total</span>
                           <span>
-                            {{ Session::get('cart')? Session::get('cart')->totalPrice : 0 }}
+                            ${{ Session::get('cart')? Session::get('cart')->totalPrice : 0 }}
                           </span>
                       </p>
                   </div>
