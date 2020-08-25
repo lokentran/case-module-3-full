@@ -27,6 +27,7 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('', 'CartController@getCart')->name('cart.index');
     Route::get('confirm', 'CartController@confirmCart')->name('cart.confirm');
     Route::post('payment', 'CartController@payment')->name('cart.payment');
+    Route::get('payment', 'CartController@success')->name('cart.success');
 });
 
 Route::get('login', 'LoginController@getLogin');
@@ -45,4 +46,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('{id}/update', 'ProductController@update')->name('products.update');
         Route::get('{id}/destroy', 'ProductController@destroy')->name('products.destroy');
     });
+
+    Route::group(['prefix' => 'bills'], function () {
+        Route::get('/', 'BillController@index')->name('bills.index');
+        Route::get('/{id}/detail', 'BillController@detail')->name('bills.detail');
+    });
+    
 });

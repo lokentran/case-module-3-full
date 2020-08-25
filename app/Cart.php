@@ -15,7 +15,7 @@ class Cart {
 
     }
 
-    public function addToCart($id,$product,$quantity=0) {
+    public function addToCart($id,$product,$quantity=1) {
         $item = [
             'product'=>$product,
             'price'=> 0,

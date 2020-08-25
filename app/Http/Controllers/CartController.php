@@ -15,7 +15,7 @@ class CartController extends Controller
     public function getCart() {
         return view('frontend.cart.detail');
     }
-
+  
     public function addCart(Request $request, $id) {
  
        
@@ -48,12 +48,18 @@ class CartController extends Controller
         $bill->totalPrice = Session::get('cart')->totalPrice;
         $bill->save();
         
+        $productsID = [];
         foreach (Session::get('cart')->items as $key => $item) {
-            $bill->products()->sync($item['product']->id);
+           \array_push($productsID, $item['product']->id);
         }
+        $bill->products()->sync($productsID);
+
         $request->session()->forget('cart');
-        return redirect()->back();
-        
+        return redirect()->route('cart.success');
+    }
+
+    public function success() {
+        return view('frontend.cart.success');
     }
 
 }
